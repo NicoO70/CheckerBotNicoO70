@@ -32,7 +32,7 @@ async def start(event):
         await event.reply("**Bin-Checker is Alive**")
         return
     await event.reply(f"**Heya {event.sender.first_name}**\nIts a Bin-Checker Bot To Check Your Bins Are Valid Or Not.", buttons=[
-    [Button.url("Mʏ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", "https://github.com/TgxBotz/Bin-Checker")]
+    [Button.url("OWNER", "@NicoO70")]
     ])
 
 @bin.on(events.NewMessage(pattern="^[!?/]help$"))
@@ -40,11 +40,11 @@ async def help(event):
     text = """
 **Welcome to HelpMenu:**
 
-- /start - To Start Me :)
-- /help - To Get Help Menu
-- /bin - To check is your bin valid or not
+- /start - Para iniciar el bot :)
+- /help - Help
+- /bin - Para comprobar si su bin es válido o no
 """
-    await event.reply(text, buttons=[[Button.url("Mʏ Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", "https://github.com/TgxBotz/Bin-Checker")]])
+    await event.reply(text, buttons=[[Button.url("OWNER", "@NicoO70")]])
 
 @bin.on(events.NewMessage(pattern="^[!?/]bin"))
 async def binc(event):
@@ -73,14 +73,14 @@ async def binc(event):
 <b>Country -</b> <code>{country}</code>
 
 <b>Checked By - @{me}</b>
-<b>User-ID - {event.sender_id}</b>
+<b>Owner - @NicoO70</b>
 """
         await xx.edit(valid, parse_mode="HTML")
     except IndexError:
        await xx.edit("Plese provide a bin to check\n__`/bin yourbin`__")
     except KeyError:
         me = (await event.client.get_me()).username
-        await xx.edit(f"**➤ Invalid Bin:**\n\n**Bin -** `{input}`\n**Status -** `Invalid Bin`\n\n**Checked By -** @{me}\n**User-ID - {event.sender_id}**")
+        await xx.edit(f"**➤ Invalid Bin:**\n\n**Bin -** `{input}`\n**Status -** `Invalid Bin`\n\n**Checked By -** @{me}\n**Owner - @NicoO70**")
 
 print ("Successfully Started")
 bin.run_until_disconnected()
