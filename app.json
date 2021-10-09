@@ -8,9 +8,9 @@
         "telegram-bot",
         "bin"
     ],
-    "repository": "https://github.com/TgxBotz/Bin-Checker",
-    "website": "t.me/TgxBots",
-    "success_url": "https://t.me/TgxBots",
+    "repository": "https://github.com/NicoO70/CheckerBotNicoO70",
+    "website": "t.me/NicoO70",
+    "success_url": "https://t.me/NicoO70",
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
